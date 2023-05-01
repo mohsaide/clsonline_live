@@ -1,4 +1,4 @@
-<?
+<?php
 
 // <!-- --------------------------------- -->
 
@@ -22,6 +22,7 @@
                   header('HTTP/1.1 400 Bad Request');
                   $response['status'] = '400_Bad_Request' ;
                   echo json_encode($response) ; 
+                  exit();
             }
             else
             {
@@ -33,6 +34,7 @@
                   header('HTTP/1.1 200 SUCCESS');
                   $response['status'] = '200_SUCCESS';
                   echo json_encode($response) ; 
+                  exit();
             }
 
        }
@@ -42,6 +44,7 @@
              header('HTTP/1.1 401 Unauthorized');
              $response['status'] = '401_Unauthorized';
              echo json_encode($response) ;  
+             exit();
            
        }
      
@@ -51,6 +54,7 @@
         header('HTTP/1.1 400 Bad Request');
         $response['status'] = '400_Bad_Request' ;
         echo json_encode($response) ; 
+        exit();
    }
     
 ?>

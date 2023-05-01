@@ -53,6 +53,11 @@ function submitForm(event) {
             document.getElementById("message").value ='';
 
         }
+
+
+        setTimeout(function() {
+          mailing_notification.style.display ='none';
+        }, 5000);
        
       })
       .catch(error => {
