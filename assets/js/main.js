@@ -1,11 +1,3 @@
-/**
-* Template Name: Impact
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -298,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // testimonials loader 
-fetch('http://localhost/assets/php/p_testimonials.php')
+fetch('http://localhost/assets/php/testimonials.php')
   .then(response => response.json())
   .then(data => {
     let jsonData;
@@ -340,7 +332,7 @@ fetch('http://localhost/assets/php/p_testimonials.php')
 
 
 // stats loader
-fetch('http://localhost/assets/php/p_stats.php')
+fetch('http://localhost/assets/php/stats.php')
   .then(response => response.json())
   .then(data => {
     jsonData = data; // store the parsed JSON data in a variable
@@ -363,7 +355,7 @@ fetch('http://localhost/assets/php/p_stats.php')
 
 
   // faq loader 
-  fetch('http://localhost/assets/php/p_faq.php')
+  fetch('http://localhost/assets/php/faq.php')
   .then(response => response.json())
   .then(data => {
     let jsonData = data; // store the parsed JSON data in a variable
@@ -417,7 +409,7 @@ fetch('http://localhost/assets/php/p_stats.php')
 
 
   // team members loader 
-  fetch('http://localhost/assets/php/p_team.php')
+  fetch('http://localhost/assets/php/team.php')
   .then(response => response.json())
   .then(data => {
     let jsonData = data; // store the parsed JSON data in a variable
