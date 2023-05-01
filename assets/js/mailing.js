@@ -5,9 +5,20 @@ function submitForm(event) {
     var myForm = document.getElementById("mailing_form");
     var formData = new FormData(myForm); 
 
+    
+    for (let i = 0; i < myForm.elements.length; i++) 
+    {
+      const element = myForm.elements[i];
+      if (!element.checkValidity())
+       {
+       alert( "( " + element.name +" ) " + element.validationMessage)
+       return ;
+      }
+    }
+
 
     
-      fetch("http://localhost/assets/php/mailing.php", {
+      fetch("http://clsonline.org/assets/php/mailing.php", {
         method: "POST",
         body: formData
       })
