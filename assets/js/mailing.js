@@ -24,50 +24,71 @@ function submitForm(event) {
       })
       .then(response => {
         
-        var mailing_notification = document.getElementById("mailing_notification");
-        console.log(response);
+
         if (response['status']==200)
         {
+            var mailing_notification = document.getElementById("mailing_notification");
             mailing_notification.innerHTML = 'Email has been sent!';
             mailing_notification.style.backgroundColor = 'green';
             document.getElementById("to").value ='';
             document.getElementById("subject").value ='';
             document.getElementById("message").value ='';
 
+            setTimeout(function() {
+              mailing_notification.style.display ='none';
+              return ; 
+            }, 5000);
+
         }
         else if (response['status']==401)
         {
+            var mailing_notification = document.getElementById("mailing_notification");
             mailing_notification.innerHTML = 'You are not authorized!';
             mailing_notification.style.backgroundColor = 'Orange';
             document.getElementById("to").value ='';
             document.getElementById("subject").value ='';
             document.getElementById("message").value ='';
 
+            setTimeout(function() {
+              mailing_notification.style.display ='none';
+              return ; 
+            }, 5000);
+
         }
         else
         {
+            var mailing_notification = document.getElementById("mailing_notification");
             mailing_notification.innerHTML = 'Something went wrong!';
             mailing_notification.style.backgroundColor = 'red';
             document.getElementById("to").value ='';
             document.getElementById("subject").value ='';
             document.getElementById("message").value ='';
 
+            setTimeout(function() {
+              mailing_notification.style.display ='none';
+              return ; 
+            }, 5000);
+
         }
 
 
-        setTimeout(function() {
-          mailing_notification.style.display ='none';
-        }, 5000);
+
        
       })
       .catch(error => {
 
+        var mailing_notification = document.getElementById("mailing_notification");
         mailing_notification.innerHTML = 'Something went wrong!';
         mailing_notification.style.backgroundColor = 'red';
         console.error('mailing js error');
         document.getElementById("to").value ='';
         document.getElementById("subject").value ='';
         document.getElementById("message").value ='';
+
+        setTimeout(function() {
+          mailing_notification.style.display ='none';
+          return ; 
+        }, 5000);
         
       });
 
