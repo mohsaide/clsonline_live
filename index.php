@@ -501,8 +501,9 @@ if (!empty($_SESSION)) {
             <form  id="mailing_form" method="post"  class="php-email-form">
                
               <input type="hidden" style="display: none;" name="secret_code" value="SECRET_TOKEN">
-              <input type="hidden" style="display: none;" name="to" value="mohammad2001arafat@gmail.com">
-
+              <input type="hidden" style="display: none;" name="to" value="system">
+              <input type="hidden" style="display: none;" name="sys_src" value="1">
+              
 
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Email - Subject" required>
