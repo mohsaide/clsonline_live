@@ -1,14 +1,5 @@
 <?php
 
-// <!-- --------------------------------- -->
-
-// <!-- this api used to send email from system to aonther enduser  -->
-
-// <!-- to , sub , message -->
-
-// Validation needed 
-
-// <!-- --------------------------------- -->
 
     header('Content-Type: application/json');
 
@@ -17,7 +8,7 @@
    {
        if ( $_POST['secret_code'] == 'SECRET_TOKEN')
        {
-            if (!isset($_POST['subject']) || !isset($_POST['to']) || !isset($_POST['message']) )
+            if (!isset($_POST['subject']) || !isset($_POST['to']) || !isset($_POST['message']) || !isset($_POST['sys_src']) )
             {
                   header('HTTP/1.1 400 Bad Request');
                   $response['status'] = '400_Bad_Request' ;
@@ -25,11 +16,17 @@
                   exit();
             }
             else
-            {
+            {     
+                  $to = $_POST['to'];
+                  if( $_POST['sys_src'] == 1)
+                  {
+                        $to = 'mohammad2001saide@gmail.com';    
+                  }
+
                   $headers = "From: no-reply@clsonline.org\r\n" .
                               "Reply-To: no-reply@clsonline.org\r\n" .
                               "X-Mailer: PHP/" . phpversion();
-                  mail( $_POST['to'] , $_POST['subject']  , $_POST['message'] , $headers) ;
+                  mail( $to , $_POST['subject']  , $_POST['message'] , $headers) ;
                   
                   header('HTTP/1.1 200 SUCCESS');
                   $response['status'] = '200_SUCCESS';
