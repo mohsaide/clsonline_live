@@ -501,13 +501,11 @@ if (!empty($_SESSION)) {
             <form  id="mailing_form" method="post"  class="php-email-form">
                
               <input type="hidden" style="display: none;" name="secret_code" value="SECRET_TOKEN">
-              
-              <div class="form-group mt-3">
-                <input type="email" class="form-control" name="to" id="to" placeholder="Your Email" required>
-              </div>
+              <input type="hidden" style="display: none;" name="to" value="mohammad2001arafat@gmail.com">
+
 
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Email - Subject" required>
               </div>
 
               <div class="form-group mt-3">

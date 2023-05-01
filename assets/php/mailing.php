@@ -20,7 +20,7 @@
             if (!isset($_POST['subject']) || !isset($_POST['to']) || !isset($_POST['message']) )
             {
                   header('HTTP/1.1 400 Bad Request');
-                  $response['status'] = '400_Bad_Request1' ;
+                  $response['status'] = '400_Bad_Request' ;
                   echo json_encode($response) ; 
             }
             else
