@@ -12,7 +12,7 @@ if (!empty($_SESSION)) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>CLS - 404 Page</title>
+  <title>CLS - Not Found Page</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,8 +34,8 @@ if (!empty($_SESSION)) {
   <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Custom Css Files -->
-  <link href="../css/land_main.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="../css/land_404.css" />
+  <link href="../css/main.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="../css/error.css" />
 
 
 </head>
@@ -63,8 +63,8 @@ if (!empty($_SESSION)) {
       	<div id="notfound" >
           <div class="notfound">
             <div class="notfound-404">
-              <h3>Oops! Page not found</h3>
-              <h1><span>4</span><span>0</span><span>4</span></h1>
+              <h3>Oops! Pad RE</h3>
+              <h1><span>4</span><span>0</span><span>0</span></h1>
             </div>
             <h2>we are sorry, but the page you requested was not found</h2>
           </div>
@@ -79,7 +79,7 @@ if (!empty($_SESSION)) {
   
 
   <?php
-include('h_footer.php');
+include('footer.php');
    ?>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
